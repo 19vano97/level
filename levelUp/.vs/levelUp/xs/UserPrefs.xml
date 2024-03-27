@@ -1,30 +1,31 @@
-﻿<Properties StartupConfiguration="{A675D7A7-1B4E-456A-8150-C81AFE2873EB}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MonoDevelop.Ide.ItemProperties.20240327__Lesson3 FirstBuild="True" />
+﻿<Properties StartupConfiguration="{5C334167-E14C-48A3-8FF3-5B3EF1BE221B}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.20240327__Lesson3 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.20240326__Lesson1 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../20240327_Lesson3/Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" />
+      <File FileName="../202403026_HW1/Program.cs" />
+      <File FileName="../20240327_Lesson3/Program.cs" Line="34" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="levelUp" expanded="True">
-            <Node name="levelUp">
+          <Node name="levelUp">
+            <Node name="202403026_HW1" expanded="True" />
+            <Node name="20240326_Lesson1" expanded="True" />
+            <Node name="20240327_Lesson3">
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="ClassPad">
-        <State name="__root__">
-          <Node name="levelUp" expanded="True" />
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.202403026__HW1 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
