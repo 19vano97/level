@@ -1,0 +1,15 @@
+/Users/ivanhontar/Work/levelUp/level/levelUp/bin/Debug/net7.0/levelUp
+/Users/ivanhontar/Work/levelUp/level/levelUp/bin/Debug/net7.0/levelUp.deps.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/bin/Debug/net7.0/levelUp.runtimeconfig.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/bin/Debug/net7.0/levelUp.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/bin/Debug/net7.0/levelUp.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/obj/Debug/net7.0/levelUp.csproj.AssemblyReference.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/obj/Debug/net7.0/levelUp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivanhontar/Work/levelUp/level/levelUp/obj/Debug/net7.0/levelUp.AssemblyInfoInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/obj/Debug/net7.0/levelUp.AssemblyInfo.cs
+/Users/ivanhontar/Work/levelUp/level/levelUp/obj/Debug/net7.0/levelUp.csproj.CoreCompileInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/obj/Debug/net7.0/levelUp.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/obj/Debug/net7.0/refint/levelUp.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/obj/Debug/net7.0/levelUp.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/obj/Debug/net7.0/levelUp.genruntimeconfig.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/obj/Debug/net7.0/ref/levelUp.dll

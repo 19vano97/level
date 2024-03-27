@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ivanhontar/Work/levelUp/level/levelUp/20240326_Lesson1.csproj",
-      "projectName": "20240326_Lesson1",
-      "projectPath": "/Users/ivanhontar/Work/levelUp/level/levelUp/20240326_Lesson1.csproj",
+      "projectUniqueName": "/Users/ivanhontar/Work/levelUp/level/202403026_HW1/202403026_HW1.csproj",
+      "projectName": "202403026_HW1",
+      "projectPath": "/Users/ivanhontar/Work/levelUp/level/202403026_HW1/202403026_HW1.csproj",
       "packagesPath": "/Users/ivanhontar/.nuget/packages/",
-      "outputPath": "/Users/ivanhontar/Work/levelUp/level/levelUp/obj/",
+      "outputPath": "/Users/ivanhontar/Work/levelUp/level/202403026_HW1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ivanhontar/.nuget/NuGet/NuGet.Config"

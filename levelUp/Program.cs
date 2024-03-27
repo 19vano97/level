@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-// See https://aka.ms/new-console-template for more information
 
-class Program
+class Lesson1
 {
     static void Main(string[] args)
     {
@@ -55,53 +54,9 @@ class Program
 
         #endregion
 
-        #region HW1
-
-        //1.1
-
-        for (int i = 0; i < 10; i++)
-        {
-            Console.Write("*");
-        }
-
-        Console.WriteLine();
-
-        for (int y = 0; y < 4; y++)
-        {
-            Console.WriteLine("*");
-        }
-
-        //for (int m = 0; m < 10; m++)
-        //{
-        //    Console.Write("*");
-        //}
-
-        ////1.2
-        //int a = 3;
-        //int b = 6;
-        //int c = 1;
-        //int d = 0;
-
-        //Console.Write("Initial: {0}, {1}, {2}", a, b, c);
-
-        //if (true)
-        //{
-        //    d = b;
-        //    b = a;
-        //    a = c;
-        //    c = d;
-        //    Console.Write("Changed: {0}, {1}, {2}", a, b, c);
-        //}
-
-        #endregion
-
         Console.WriteLine();
         Console.Write("Press any key...");
         Console.ReadKey();
     }
 }
-
-
-
-
 
