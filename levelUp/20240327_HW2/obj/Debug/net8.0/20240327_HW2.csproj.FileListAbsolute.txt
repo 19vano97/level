@@ -1,0 +1,15 @@
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/obj/Debug/net8.0/20240327_HW2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/obj/Debug/net8.0/20240327_HW2.AssemblyInfoInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/obj/Debug/net8.0/20240327_HW2.AssemblyInfo.cs
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/obj/Debug/net8.0/20240327_HW2.csproj.CoreCompileInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/obj/Debug/net8.0/20240327_HW2.sourcelink.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/bin/Debug/net8.0/20240327_HW2
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/bin/Debug/net8.0/20240327_HW2.deps.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/bin/Debug/net8.0/20240327_HW2.runtimeconfig.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/bin/Debug/net8.0/20240327_HW2.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/bin/Debug/net8.0/20240327_HW2.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/obj/Debug/net8.0/20240327_HW2.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/obj/Debug/net8.0/refint/20240327_HW2.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/obj/Debug/net8.0/20240327_HW2.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/obj/Debug/net8.0/20240327_HW2.genruntimeconfig.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240327_HW2/obj/Debug/net8.0/ref/20240327_HW2.dll
