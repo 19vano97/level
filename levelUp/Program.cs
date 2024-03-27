@@ -4,27 +4,27 @@ class Lesson1
 {
     static void Main(string[] args)
     {
-        //Console.ForegroundColor = ConsoleColor.Green; //font color green
-        //Console.BackgroundColor = ConsoleColor.Red;
+        Console.ForegroundColor = ConsoleColor.Green; //font color green
+        Console.BackgroundColor = ConsoleColor.Red;
 
-        //Console.CursorLeft = 20;
+        Console.CursorLeft = 20;
 
-        //int a = 15;
+        int a = 15;
 
-        //Console.CursorTop = a;
+        Console.CursorTop = a;
 
-        //Console.WriteLine("Hi");
+        Console.WriteLine("Hi");
 
-        //Console.WriteLine();
+        Console.WriteLine();
 
-        //Console.BackgroundColor = ConsoleColor.Black;
-        //Console.ForegroundColor = ConsoleColor.Gray;
+        Console.BackgroundColor = ConsoleColor.Black;
+        Console.ForegroundColor = ConsoleColor.Gray;
 
 
-        //for (int i = 0; i < 10; i++)
-        //{
-        //    Console.WriteLine($"hi {i}"); //as on bash 
-        //}
+        for (int i = 0; i < 10; i++)
+        {
+           Console.WriteLine($"hi {i}"); //as on bash 
+        }
 
         #region Types
 
@@ -33,22 +33,22 @@ class Lesson1
         Console.WriteLine($"Min value: {int.MinValue} \nMax value: {int.MaxValue}");
         Console.WriteLine("Min value : {0} \nMax value: {1}", int.MinValue, int.MaxValue); //Note: this way is abount not using "$" to execute the string. Just like in an array put numbers and params after
 
-        //int outputText;
+        int outputText;
 
-        //Console.WriteLine("Enter your age:");
-        //string text = Console.ReadLine();
-        ////Console.WriteLine("text: {0}", text);
-        ////text = int.Parse(text); //exception
-        ////Console.WriteLine(text);
+        Console.WriteLine("Enter your age:");
+        string text = Console.ReadLine();
+        //Console.WriteLine("text: {0}", text);
+        //text = int.Parse(text); //exception
+        //Console.WriteLine(text);
 
-        //if (int.TryParse(text, out outputText))
-        //{
-        //    Console.WriteLine("outputText: {0}", outputText);
-        //}
-        //else
-        //{
-        //    Console.WriteLine("Error");
-        //}
+        if (int.TryParse(text, out outputText))
+        {
+           Console.WriteLine("outputText: {0}", outputText);
+        }
+        else
+        {
+           Console.WriteLine("Error");
+        }
 
 
 
