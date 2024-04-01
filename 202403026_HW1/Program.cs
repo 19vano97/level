@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
-Console.WriteLine("Hello, World!");
 
 #region HW1.1
     //rectangle

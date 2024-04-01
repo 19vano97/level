@@ -295,6 +295,5 @@ namespace hw2
             #endregion
 
         }
-        //public static double Min (double valDouble1, double valDouble2);
     }
 }
