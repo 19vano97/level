@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/20240329_Lesson7.csproj",
-      "projectName": "20240329_Lesson7",
-      "projectPath": "/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/20240329_Lesson7.csproj",
+      "projectUniqueName": "/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/20240329_Lesson8.csproj",
+      "projectName": "20240329_Lesson8",
+      "projectPath": "/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/20240329_Lesson8.csproj",
       "packagesPath": "/Users/ivanhontar/.nuget/packages/",
       "outputPath": "/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/obj/",
       "projectStyle": "PackageReference",
