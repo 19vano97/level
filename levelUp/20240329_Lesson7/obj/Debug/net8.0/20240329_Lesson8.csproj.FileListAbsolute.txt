@@ -1,0 +1,15 @@
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/obj/Debug/net8.0/20240329_Lesson8.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/obj/Debug/net8.0/20240329_Lesson8.AssemblyInfoInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/obj/Debug/net8.0/20240329_Lesson8.AssemblyInfo.cs
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/obj/Debug/net8.0/20240329_Lesson8.csproj.CoreCompileInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/obj/Debug/net8.0/20240329_Lesson8.sourcelink.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/bin/Debug/net8.0/20240329_Lesson8
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/bin/Debug/net8.0/20240329_Lesson8.deps.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/bin/Debug/net8.0/20240329_Lesson8.runtimeconfig.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/bin/Debug/net8.0/20240329_Lesson8.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/bin/Debug/net8.0/20240329_Lesson8.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/obj/Debug/net8.0/20240329_Lesson8.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/obj/Debug/net8.0/refint/20240329_Lesson8.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/obj/Debug/net8.0/20240329_Lesson8.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/obj/Debug/net8.0/20240329_Lesson8.genruntimeconfig.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240329_Lesson7/obj/Debug/net8.0/ref/20240329_Lesson8.dll

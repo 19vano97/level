@@ -27,51 +27,46 @@ switch (direction)
         break;    
 }
 
-#region enumIntialize
-    Direction.d2;
 
 
 
-#endregion
 
+// ConsoleKey key;
+// int x = Console.WindowWidth /2;
+// int y = Console.WindowHeight / 2;
 
+// Console.CursorVisible = false;
 
-ConsoleKey key;
-int x = Console.WindowWidth /2;
-int y = Console.WindowHeight / 2;
+// Console.SetCursorPosition(x, y);
+// System.Console.Write("#");
 
-Console.CursorVisible = false;
+// do
+// {
+//     key = Console.ReadKey().Key;
+//     Console.SetCursorPosition(x, y);
+//     Console.Write(' ');
+//     switch (key)
+//     {
+//         case ConsoleKey.LeftArrow:
+//             x--;
+//             break;
+//         case ConsoleKey.UpArrow:
+//             y--;
+//             break;
+//         case ConsoleKey.RightArrow: 
+//             x++; 
+//             break;
+//         case ConsoleKey.DownArrow:
+//             y++;
+//             break; 
+//         default:
+//             break;
+//     }  
+//     Console.SetCursorPosition(x, y);
+//     Console.Write('#');
+// } while (key != ConsoleKey.Escape);
 
-Console.SetCursorPosition(x, y);
-System.Console.Write("#");
-
-do
-{
-    key = Console.ReadKey().Key;
-    Console.SetCursorPosition(x, y);
-    Console.Write(' ');
-    switch (key)
-    {
-        case ConsoleKey.LeftArrow:
-            x--;
-            break;
-        case ConsoleKey.UpArrow:
-            y--;
-            break;
-        case ConsoleKey.RightArrow: 
-            x++; 
-            break;
-        case ConsoleKey.DownArrow:
-            y++;
-            break; 
-        default:
-            break;
-    }  
-    Console.SetCursorPosition(x, y);
-    Console.Write('#');
-} while (key != ConsoleKey.Escape);
-
-Console.CursorVisible = true;
+// Console.CursorVisible = true;
 
 
 Direction d1 = Direction.Right;
@@ -107,37 +102,37 @@ else
     System.Console.WriteLine("Wrong");
 }
 
-System.Console.WriteLine("Choose direction");
-for (Direction b = Direction.Left; b < Direction.Bottom; b++)
-{
-    System.Console.WriteLine("{0}", b);
-}
-System.Console.WriteLine("");
-if (Enum.TryParse(Console.ReadLine(), out Border ch)
-    && ch >= Border.TopLeft && ch <= Border.TopRight)
-{
-    System.Console.WriteLine($"d1: {d1}, (int)d1: {(int)d1}");
-}
-else
-{
-    System.Console.WriteLine("Error");
-}
+// System.Console.WriteLine("Choose direction");
+// for (Direction b = Direction.Left; b < Direction.Bottom; b++)
+// {
+//     System.Console.WriteLine("{0}", b);
+// }
+// System.Console.WriteLine("");
+// if (Enum.TryParse(Console.ReadLine(), out Border ch)
+//     && ch >= Border.TopLeft && ch <= Border.TopRight)
+// {
+//     System.Console.WriteLine($"d1: {d1}, (int)d1: {(int)d1}");
+// }
+// else
+// {
+//     System.Console.WriteLine("Error");
+// }
 
-System.Console.WriteLine("Choose border");
-for (Border b = Border.TopLeft; b < Border.TopRight; b++)
-{
-    System.Console.WriteLine("{0}", b);
-}
-System.Console.WriteLine("");
-if (Enum.TryParse(Console.ReadLine(), out Border ch)
-    && ch >= Border.TopLeft && ch <= Border.TopRight)
-{
-    System.Console.WriteLine($"d1: {0}, (int)d1: {(int)ch}");
-}
-else
-{
-    System.Console.WriteLine("Error");
-}
+// System.Console.WriteLine("Choose border");
+// for (Border b = Border.TopLeft; b < Border.TopRight; b++)
+// {
+//     System.Console.WriteLine("{0}", b);
+// }
+// System.Console.WriteLine("");
+// if (Enum.TryParse(Console.ReadLine(), out Border ch1)
+//     && ch1 >= Border.TopLeft && ch1 <= Border.TopRight)
+// {
+//     System.Console.WriteLine($"d1: {0}, (int)d1: {(int)ch1}");
+// }
+// else
+// {
+//     System.Console.WriteLine("Error");
+// }
 
 
-System.Console.WriteLine();
+// System.Console.WriteLine();

@@ -1,0 +1,15 @@
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/bin/Debug/net7.0/202403026_HW1
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/bin/Debug/net7.0/202403026_HW1.deps.json
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/bin/Debug/net7.0/202403026_HW1.runtimeconfig.json
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/bin/Debug/net7.0/202403026_HW1.dll
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/bin/Debug/net7.0/202403026_HW1.pdb
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/obj/Debug/net7.0/202403026_HW1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/obj/Debug/net7.0/202403026_HW1.AssemblyInfoInputs.cache
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/obj/Debug/net7.0/202403026_HW1.AssemblyInfo.cs
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/obj/Debug/net7.0/202403026_HW1.csproj.CoreCompileInputs.cache
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/obj/Debug/net7.0/202403026_HW1.sourcelink.json
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/obj/Debug/net7.0/202403026_HW1.dll
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/obj/Debug/net7.0/refint/202403026_HW1.dll
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/obj/Debug/net7.0/202403026_HW1.pdb
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/obj/Debug/net7.0/202403026_HW1.genruntimeconfig.cache
+/Users/ivanhontar/Work/levelUp/level/202403026_HW1/obj/Debug/net7.0/ref/202403026_HW1.dll
