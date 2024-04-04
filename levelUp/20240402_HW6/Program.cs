@@ -11,7 +11,7 @@ using System.Text;
 
     for (int i = 0; i < text.Length; i++)
     {
-    byteNewGen[i] = (byte)(mask ^ byteArray[i]);
+        byteNewGen[i] = (byte)(mask ^ byteArray[i]);
     }
 
     string resEncoded = Encoding.UTF8.GetString(byteNewGen);

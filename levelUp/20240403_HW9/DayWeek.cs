@@ -11,6 +11,5 @@ public enum DayWeek : byte
     Thursday = 0b00001000,
     Friday = 0b00010000,
     Saturday = 0b00100000,
-    Sunday = 0b01000000,
-    Result
+    Sunday = 0b01000000
 }

@@ -1,19 +1,30 @@
-﻿<Properties StartupConfiguration="{095FD486-2E69-4CFA-B1FF-292C62F3AF01}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
+﻿<Properties StartupConfiguration="{63ED988B-1CEB-4BF8-86E0-67344D35B8D7}|Default">
+  <MonoDevelop.Ide.ItemProperties.20240327__HW2 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.20240403__HW9 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.202403026__HW1 PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.20240327__Lesson3 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.20240326__Lesson1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="20240403_HW9/Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="20240403_HW9/Program.cs" Line="1" Column="1" />
+      <File FileName="20240403_HW9/Program.cs" Line="172" Column="73" />
+      <File FileName="20240403_HW9/DayWeek.cs" Line="15" Column="2" />
+      <File FileName="20240402_Lesson6/Program.cs" Line="1" Column="1" />
+      <File FileName="20240401_Lesson8/Program.cs" Line="71" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="levelUp">
-            <Node name="20240403_HW9" expanded="True">
+          <Node name="levelUp" expanded="True">
+            <Node name="20240327_HW2" expanded="True" />
+            <Node name="20240401_Lesson9" expanded="True" />
+            <Node name="20240402_HW6" expanded="True" />
+            <Node name="20240402_Lesson6" expanded="True" />
+            <Node name="20240403_HW9">
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
@@ -21,8 +32,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.202403026__HW1 PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
 </Properties>
