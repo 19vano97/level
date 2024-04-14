@@ -1,61 +1,119 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Text;
-#region Encoding/Decoding
-    string text = "Hello World!";
-
-    byte[] byteArray = Encoding.UTF8.GetBytes(text);
-
-    byte mask = 0b01001001;
-    byte[] byteNewGen = new byte[text.Length];
 
 
-    for (int i = 0; i < text.Length; i++)
+internal class Program
+{
+    private static void Main(string[] args)
     {
-        byteNewGen[i] = (byte)(mask ^ byteArray[i]);
+
+        #region Encoding/Decoding
+
+            string text = InputString();
+    
+            byte mask = InputByte("Enter a mask: ");
+    
+            string encodedText = EncodeByMask(mask, text);
+    
+            System.Console.WriteLine(encodedText);
+    
+            string decodedText = DecodeByMask(mask, encodedText);
+    
+            System.Console.WriteLine(decodedText);
+
+        #endregion
+
+        System.Console.WriteLine();
+
+        #region counting0and1
+
+            int number = InputIntNumber("firstArg");
+
+            CountZeroAndOne(number);
+
+        #endregion
     }
 
-    string resEncoded = Encoding.UTF8.GetString(byteNewGen);
-    System.Console.WriteLine(resEncoded);
+    
 
-    byte[] byteDecoded = new byte[text.Length];
-
-    for (int i = 0; i < text.Length; i++)
+    public static int InputIntNumber(string varName)
     {
-        byteDecoded [i] = (byte)(mask ^ byteNewGen[i]);
+        System.Console.Write("Enter {0} = ", varName);
+        int result = int.Parse(Console.ReadLine());
+
+        return result;
     }
-    string resDecoded = Encoding.UTF8.GetString(byteDecoded );
-    System.Console.WriteLine(resDecoded);
-#endregion
 
-#region counting0and1
-
-    System.Console.Write("firstArg = ");
-    int firstArg = int.Parse(Console.ReadLine());
-
-
-    int zeroCounter = 0;
-    int oneCounter = 0;
-
-    string firstArgString = Convert.ToString(firstArg, 2);
-
-
-    for (int i = 0; i < firstArgString.Length; i++)
+    public static string InputString()
     {
-        if (firstArgString[i] == '0')
+        System.Console.Write("Enter a text: ");
+        string str = Console.ReadLine();
+
+        return str;
+    }
+
+    public static byte InputByte(string message)
+    {
+        System.Console.WriteLine(message);
+        // byte inputByte = byte.Parse(Console.ReadLine());
+        byte inputByte = 0b01001001;
+
+        return inputByte;
+    }
+
+    public static string EncodeByMask(byte maskDefault, string text)
+    {
+        byte[] byteArray = Encoding.UTF8.GetBytes(text);
+
+        byte[] byteNewGen = new byte[text.Length];
+
+        for (int i = 0; i < text.Length; i++)
         {
-            zeroCounter++;
+            byteNewGen[i] = (byte)(maskDefault ^ byteArray[i]);
         }
-        else
-        {
-            oneCounter++;
-        }
+
+        string textEncoded = Encoding.UTF8.GetString(byteNewGen);
+
+        return textEncoded;
     }
 
-    System.Console.WriteLine("Byte = {0}", firstArgString);
-    System.Console.WriteLine("ZeroCounter = {0}", zeroCounter);
-    System.Console.WriteLine("OneCounter = {0}", oneCounter);
+    public static string DecodeByMask(byte maskDefault, string textEncoded)
+    {
+        byte[] byteArray = Encoding.UTF8.GetBytes(textEncoded);
 
-#endregion
+        byte[] byteDecoded = new byte[textEncoded.Length];
 
+        for (int i = 0; i < textEncoded.Length; i++)
+        {
+            byteDecoded[i] = (byte)(maskDefault ^ byteArray[i]);
+        }
 
+        string textDecoded = Encoding.UTF8.GetString(byteDecoded);
 
+        return textDecoded;
+    }
+
+    public static void CountZeroAndOne(int number)
+    {
+        int zeroCounter = 0;
+        int oneCounter = 0;
+
+        string numberString = Convert.ToString(number, 2);
+
+        for (int i = 0; i < numberString.Length; i++)
+        {
+            if (numberString[i] == '0')
+            {
+                zeroCounter++;
+            }
+            else
+            {
+                oneCounter++;
+            }
+        }
+
+        Console.WriteLine("Byte = {0}", numberString);
+        Console.WriteLine("ZeroCounter = {0}", zeroCounter);
+        Console.WriteLine("OneCounter = {0}", oneCounter);
+    }
+}

@@ -1,0 +1,15 @@
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/bin/Debug/net8.0/20240411_HW11
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/bin/Debug/net8.0/20240411_HW11.deps.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/bin/Debug/net8.0/20240411_HW11.runtimeconfig.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/bin/Debug/net8.0/20240411_HW11.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/bin/Debug/net8.0/20240411_HW11.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/obj/Debug/net8.0/20240411_HW11.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/obj/Debug/net8.0/20240411_HW11.AssemblyInfoInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/obj/Debug/net8.0/20240411_HW11.AssemblyInfo.cs
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/obj/Debug/net8.0/20240411_HW11.csproj.CoreCompileInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/obj/Debug/net8.0/20240411_HW11.sourcelink.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/obj/Debug/net8.0/20240411_HW11.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/obj/Debug/net8.0/refint/20240411_HW11.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/obj/Debug/net8.0/20240411_HW11.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/obj/Debug/net8.0/20240411_HW11.genruntimeconfig.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240411_HW11/obj/Debug/net8.0/ref/20240411_HW11.dll
