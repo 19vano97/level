@@ -1,22 +1,21 @@
-﻿<Properties StartupConfiguration="{A31E1136-1483-4655-91A0-2A1B6D993D73}|Default">
-  <MultiItemStartupConfigurations />
+﻿<Properties StartupConfiguration="{90B9574D-C998-4A61-B97F-F436F7DC0FC0}|Default">
+  <MonoDevelop.Ide.ItemProperties.20240327__HW2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.20240327__Lesson3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.20240430__Lesson16 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.202403026__HW1 PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="20240403_HW8/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="20240430_Lesson16/Program.cs">
     <Files>
-      <File FileName="20240403_HW9/Program.cs" Line="68" Column="55" />
-      <File FileName="20240403_HW9/DayWeek.cs" />
-      <File FileName="20240402_Lesson6/Program.cs" />
-      <File FileName="20240401_Lesson8/Program.cs" />
-      <File FileName="20240403_HW8/Program.cs" Line="29" Column="46" />
+      <File FileName="20240430_Lesson16/Program.cs" Line="54" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="levelUp" expanded="True">
-            <Node name="20240403_HW8">
+          <Node name="levelUp">
+            <Node name="20240430_Lesson16">
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
@@ -24,10 +23,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.20240327__Lesson3 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.20240403__HW9 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.20240327__HW2 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.20240403__HW8 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.20240403__HW9 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.202403026__HW1 PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MultiItemStartupConfigurations />
 </Properties>
