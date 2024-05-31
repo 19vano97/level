@@ -1,0 +1,15 @@
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/bin/Debug/net8.0/Galaga
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/bin/Debug/net8.0/Galaga.deps.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/bin/Debug/net8.0/Galaga.runtimeconfig.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/bin/Debug/net8.0/Galaga.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/bin/Debug/net8.0/Galaga.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/obj/Debug/net8.0/Galaga.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/obj/Debug/net8.0/Galaga.AssemblyInfoInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/obj/Debug/net8.0/Galaga.AssemblyInfo.cs
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/obj/Debug/net8.0/Galaga.csproj.CoreCompileInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/obj/Debug/net8.0/Galaga.sourcelink.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/obj/Debug/net8.0/Galaga.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/obj/Debug/net8.0/refint/Galaga.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/obj/Debug/net8.0/Galaga.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/obj/Debug/net8.0/Galaga.genruntimeconfig.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/Galaga/obj/Debug/net8.0/ref/Galaga.dll

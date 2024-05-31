@@ -1,0 +1,15 @@
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/bin/Debug/net8.0/20240524_Dynamic
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/bin/Debug/net8.0/20240524_Dynamic.deps.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/bin/Debug/net8.0/20240524_Dynamic.runtimeconfig.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/bin/Debug/net8.0/20240524_Dynamic.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/bin/Debug/net8.0/20240524_Dynamic.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/obj/Debug/net8.0/20240524_Dynamic.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/obj/Debug/net8.0/20240524_Dynamic.AssemblyInfoInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/obj/Debug/net8.0/20240524_Dynamic.AssemblyInfo.cs
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/obj/Debug/net8.0/20240524_Dynamic.csproj.CoreCompileInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/obj/Debug/net8.0/20240524_Dynamic.sourcelink.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/obj/Debug/net8.0/20240524_Dynamic.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/obj/Debug/net8.0/refint/20240524_Dynamic.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/obj/Debug/net8.0/20240524_Dynamic.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/obj/Debug/net8.0/20240524_Dynamic.genruntimeconfig.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/20240524_Dynamic/obj/Debug/net8.0/ref/20240524_Dynamic.dll

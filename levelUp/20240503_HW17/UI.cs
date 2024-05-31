@@ -11,13 +11,14 @@ public class UI
         Console.WriteLine("<A>. Get avarage statistics");
         Console.WriteLine("<M>. Get min weather kinds");
         Console.WriteLine("<X>. Get max weather kinds");
+        Console.WriteLine("<C>. Compare weather by year/month");
         Console.WriteLine("Your choice: ");
 
         ConsoleKey userChoice;
 
         do
         {
-            Console.SetCursorPosition(13, 5);
+            Console.SetCursorPosition(13, 6);
 
             userChoice = Console.ReadKey().Key;
             Console.WriteLine();
@@ -35,6 +36,9 @@ public class UI
                     break;
                 case ConsoleKey.X:
                     PrintMaxWeatherStats(sourceArray);
+                    break;
+                case ConsoleKey.C:
+                    PrintCompareOfTwoYearsOrMonths(sourceArray);
                     break;
                 default:
                     break;
@@ -335,6 +339,192 @@ public class UI
         }
     }
 
+    public static void PrintCompareOfTwoYearsOrMonths(Weather[,][] sourceArray)
+    {
+        Console.Clear();
+
+        Console.WriteLine("Menu");
+        Console.WriteLine("<Y>. Compare 2 different years by special weather");
+        Console.WriteLine("<U>. Compare 2 different years by all kinds of weather");
+        Console.WriteLine("<N>. Compare 2 different months by special weather");
+        Console.WriteLine("<M>. Compare 2 different months by all kinds of weather");
+        Console.WriteLine("<Backspace>. Back");
+        Console.WriteLine("Your choice: ");
+
+        ConsoleKey userChoice;
+
+        do
+        {
+            Console.SetCursorPosition(13, 6);
+
+            userChoice = Console.ReadKey().Key;
+            Console.WriteLine();
+
+            switch (userChoice)
+            {
+                case ConsoleKey.Y:
+                    int year1 = BL.EnterIntValue("year1");
+                    int year2 = BL.EnterIntValue("year2");
+
+                    Weather weatherChoose = ChooseWeather();
+
+                    int weatherDifference = BL.CompareTwoYearsOrMonths(sourceArray, year1, year2: year2, kind: weatherChoose);
+                    
+                    if (weatherDifference > 0)
+                    {
+                        System.Console.WriteLine("In {0} had more {1} weather than {2}", year1, weatherChoose, year2);
+                    }
+                    else if (weatherDifference < 0 & weatherDifference > int.MinValue)
+                    {
+                        System.Console.WriteLine("In {0} had more {1} weather than {2}", year2, weatherChoose, year1);
+                    }
+                    else if (weatherDifference == 0)
+                    {
+                        System.Console.WriteLine("In {0} had the same amount of {1} weather than {2}", year1, weatherChoose, year2);
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("Error");
+                    }
+                    break;
+                case ConsoleKey.U:
+                    year1 = BL.EnterIntValue("year1");
+                    year2 = BL.EnterIntValue("year2");
+
+                    byte weatherShift = 0b0000000000000001;
+
+                    for (int i = 0; i < Enum.GetNames(typeof(Weather)).Length - 1; i++)
+                    {
+                        weatherDifference = BL.CompareTwoYearsOrMonths(sourceArray, year1, year2, kind: (Weather)weatherShift);
+                        
+                        if (weatherDifference > 0)
+                        {
+                            System.Console.WriteLine("In {0} had more {1} weather than {2}", year1, (Weather)weatherShift, year2);
+                        }
+                        else if (weatherDifference < 0 & weatherDifference > int.MinValue)
+                        {
+                            System.Console.WriteLine("In {0} had more {1} weather than {2}", year2, (Weather)weatherShift, year1);
+                        }
+                        else if (weatherDifference == 0)
+                        {
+                            System.Console.WriteLine("In {0} had the same amount of {1} weather than {2}", year1, (Weather)weatherShift, year2);
+                        }
+                        else
+                        {
+                            System.Console.WriteLine("Error");
+                        }
+
+                        weatherShift = (byte)(weatherShift << 1);
+                    }
+                    
+                    break;
+                case ConsoleKey.N:
+                    year1 = BL.EnterIntValue("year1");
+                    int month1 = GetMonth();
+                    year2 = BL.EnterIntValue("year2");
+                    int month2 = GetMonth();
+                    
+
+                    weatherChoose = ChooseWeather();
+
+                    weatherDifference = BL.CompareTwoYearsOrMonths(sourceArray, year1, month1,year2, month2, kind: weatherChoose);
+                    
+                    if (weatherDifference > 0)
+                    {
+                        System.Console.WriteLine("In year: {0} month: {1} had more {2} weather than year: {3}, month {4}", 
+                                                    year1, month1, weatherChoose, year2, month2);
+                    }
+                    else if (weatherDifference < 0 & weatherDifference > int.MinValue)
+                    {
+                        System.Console.WriteLine("In year: {0} month: {1} had more {2} weather than year: {3}, month {4}", 
+                                                    year2, month2, weatherChoose, year1, month1);
+                    }
+                    else if (weatherDifference == 0)
+                    {
+                        System.Console.WriteLine("In year: {0}, month: {1} had the same amount of {2} weather than year: {3}, month {4}", 
+                                                    year1, month1, weatherChoose, year2, month2);
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("Error");
+                    }
+                    break;
+                case ConsoleKey.M:
+                    year1 = BL.EnterIntValue("year1");
+                    month1 = GetMonth();
+                    year2 = BL.EnterIntValue("year2");
+                    month2 = GetMonth();
+
+                    weatherShift = 0b0000000000000001;
+
+                    for (int i = 0; i < Enum.GetNames(typeof(Weather)).Length - 1; i++)
+                    {
+                        weatherDifference = BL.CompareTwoYearsOrMonths(sourceArray, year1, year2, kind: (Weather)weatherShift);
+                        
+                        if (weatherDifference > 0)
+                        {
+                            System.Console.WriteLine("In year: {0} month: {1} had more {2} weather than year: {3}, month: {4}", 
+                                                    year1, (MonthsName)month1 + 1, (Weather)weatherShift, year2, (MonthsName)month2 + 1);
+                        }
+                        else if (weatherDifference < 0 & weatherDifference > int.MinValue)
+                        {
+                            System.Console.WriteLine("In year: {0} month: {1} had more {2} weather than year: {3}, month {4}", 
+                                                    year2, month2, (Weather)weatherShift, year1, month1);
+                        }
+                        else if (weatherDifference == 0)
+                        {
+                            System.Console.WriteLine("In year: {0}, month: {1} had the same amount of {2} weather than year: {3}, month: {4}", 
+                                                    year1, month1, (Weather)weatherShift, year2, month2);
+                        }
+                        else
+                        {
+                            System.Console.WriteLine("Error");
+                        }
+
+                        weatherShift = (byte)(weatherShift << 1);
+                    }
+                    break;
+
+                case ConsoleKey.Backspace:
+                    GetMainInterface(sourceArray);
+                    break;
+                default:
+                    Console.SetCursorPosition(13, 6);
+                    break;
+            }
+
+        } while (userChoice != ConsoleKey.Escape);
+    }
+
+    public static Weather ChooseWeather()
+    {
+        byte weatherByte = 0b0000000000000001;
+
+        for (int i = 0; i < Enum.GetNames(typeof(Weather)).Length - 1; i++)
+        {
+            System.Console.Write("{0}: {1}, ", (Weather)weatherByte, i);
+            weatherByte = (byte)(weatherByte << 1);
+        }
+
+        System.Console.WriteLine();
+
+        System.Console.Write("Enter a number of the weather: ");
+        int shift = int.Parse(Console.ReadLine());
+
+        if (shift > Enum.GetNames(typeof(Weather)).Length - 1)
+        {
+            System.Console.WriteLine("Wrong! Enter a number from the order");
+            Weather weatherRerun = ChooseWeather();
+            return weatherRerun;
+        }
+
+        byte weatherShift = 0b0000000000000001;
+        weatherShift = (byte)(weatherShift << shift);
+
+        System.Console.WriteLine((Weather)weatherShift);
+
+        return (Weather)weatherShift;
+    }
     public static void PrintWeatherByDate(Weather[,][] sourceArray, int sourceYear = 0, int sourceMonth = -1, int sourceDay = -1)
     {
         if (sourceMonth == -1)

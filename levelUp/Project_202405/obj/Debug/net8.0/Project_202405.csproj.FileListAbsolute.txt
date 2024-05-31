@@ -1,0 +1,15 @@
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/bin/Debug/net8.0/Project_202405
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/bin/Debug/net8.0/Project_202405.deps.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/bin/Debug/net8.0/Project_202405.runtimeconfig.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/bin/Debug/net8.0/Project_202405.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/bin/Debug/net8.0/Project_202405.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/obj/Debug/net8.0/Project_202405.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/obj/Debug/net8.0/Project_202405.AssemblyInfoInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/obj/Debug/net8.0/Project_202405.AssemblyInfo.cs
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/obj/Debug/net8.0/Project_202405.csproj.CoreCompileInputs.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/obj/Debug/net8.0/Project_202405.sourcelink.json
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/obj/Debug/net8.0/Project_202405.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/obj/Debug/net8.0/refint/Project_202405.dll
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/obj/Debug/net8.0/Project_202405.pdb
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/obj/Debug/net8.0/Project_202405.genruntimeconfig.cache
+/Users/ivanhontar/Work/levelUp/level/levelUp/Project_202405/obj/Debug/net8.0/ref/Project_202405.dll

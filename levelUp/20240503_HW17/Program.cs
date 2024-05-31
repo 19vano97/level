@@ -19,5 +19,9 @@ internal class Program
         // UI.PrintWeatherByDate(weatherCalendar, 5, 3);
         // float value = BL.GetAvarageOfKindsOfWeather(weatherCalendar, Weather.Snow, 5 ,3);
         // System.Console.WriteLine(value);
+
+        // Weather test = UI.ChooseWeather();
+
+        // UI.PrintCompareOfTwoYearsOrMonths(weatherCalendar);
     }
 }

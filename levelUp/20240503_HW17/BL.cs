@@ -259,4 +259,105 @@ public class BL
 
         return null;
     }
+
+    public static int CompareTwoYearsOrMonths(Weather[,][] sourceArray, int year1 = 0, int month1 = -1, int year2 = 0, 
+                                                int month2 = -1, Weather kind = Weather.None)
+    {
+        if (month1 == -1 || month2 == -1)
+        {
+            int weatherValues1 = 0;
+            int weatherValues2 = 0;
+
+            for (int month = 0; month < sourceArray.GetLength(1); month++)
+            {
+                for (int day = 0; day < sourceArray[year1, month].Length; day++)
+                {
+                    if (sourceArray[year1, month][day].HasFlag(kind))
+                    {
+                        weatherValues1++;
+                    }
+                }
+            }
+
+            for (int month = 0; month < sourceArray.GetLength(1); month++)
+            {
+                for (int day = 0; day < sourceArray[year2, month].Length; day++)
+                {
+                    if (sourceArray[year2, month][day].HasFlag(kind))
+                    {
+                        weatherValues2++;
+                    }
+                }
+            }
+
+            int difference = weatherValues1 - weatherValues2;
+
+            return difference;
+        }
+        else if (month1 >= 0 & month2 >= 0)
+        {
+            int weatherValues1 = 0;
+            int weatherValues2 = 0;
+
+            for (int day = 0; day < sourceArray[year1, month1].Length; day++)
+                {
+                    if (sourceArray[year1, month1][day].HasFlag(kind))
+                    {
+                        weatherValues1++;
+                    }
+                }
+
+            for (int day = 0; day < sourceArray[year2, month2].Length; day++)
+            {
+                if (sourceArray[year2, month2][day].HasFlag(kind))
+                {
+                    weatherValues2++;
+                }
+            }
+
+            int difference = weatherValues1 - weatherValues2;
+
+            return difference; 
+        }
+
+        return int.MinValue;
+    }
+
+    public static int GetNumberOfWeather(Weather[,][] sourceArray, int year1 = 0, int month = -1, 
+                                                Weather kind = Weather.None)
+    {
+        if (month == -1)
+        {
+            int weatherValues = 0;
+
+            for (int monthFor = 0; monthFor < sourceArray.GetLength(1); monthFor++)
+            {
+                for (int day = 0; day < sourceArray[year1, monthFor].Length; day++)
+                {
+                    if (sourceArray[year1, monthFor][day].HasFlag(kind))
+                    {
+                        weatherValues++;
+                    }
+                }
+            }
+
+            return weatherValues;
+        }
+        else if (month >= 0)
+        {
+            int weatherValues = 0;
+
+            for (int day = 0; day < sourceArray[year1, month].Length; day++)
+                {
+                    if (sourceArray[year1, month][day].HasFlag(kind))
+                    {
+                        weatherValues++;
+                    }
+                }
+
+            return weatherValues; 
+        }
+
+        return -1;
+    }
 }
