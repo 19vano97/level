@@ -2,7 +2,7 @@
 
 [Flags]
 
-public enum SpaceshipMovement
+public enum Movements
 {
     None,
     Up,

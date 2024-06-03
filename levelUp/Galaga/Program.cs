@@ -8,46 +8,40 @@ internal class Program
     {
         Console.Clear();
 
-        //TODO Create Menu
+        GameLevelStructure level = LevelDesign.GetLevelOfDifficulty(LevelDesign.ChooseLevelFromAList());
 
-        //TODO Select level
+        Console.Clear();
 
-        //TODO Create Scoreboard
+        int score = 0;
 
         char[,] gamezone = GamezoneManipulations.InitGamezone();
 
-        Spaceship[] allSpaceships = SpaceshipManipulation.InitSpaceshipArray(gamezone);
+        Spaceship[] allSpaceships = SpaceshipManipulation.InitSpaceshipArray(gamezone, level);
         Spaceship hero = allSpaceships[0];
         
-        allSpaceships = SpaceshipManipulation.AddSpaceshipToArray(ref allSpaceships, 
-                                                                    SpaceshipManipulation.InitEnemy(gamezone));
-
         UI.SetDefaultPosition(gamezone);
 
         int x = UI.GetDefaultPosition(gamezone).x;
         int y = UI.GetDefaultPosition(gamezone).y;
+
         bool isRunning = true;
-
-        SpaceshipMovement direction = SpaceshipMovement.None;
-
-        //TODO enemy automove
+        bool isGameOver = false;
         
-        //TODO enemy autoshoot
+        // Start position
+        hero.spaceshipCoodinates.x = x;
+        hero.spaceshipCoodinates.y = y;
 
-        //TODO Enemies autogenerator (max enemies on screen)
+        Movements direction = Movements.None;
 
         Console.CursorVisible = false;
 
-        gamezone = UI.PrintEnemy(ref gamezone, allSpaceships[1]);   // TEMP enemy
-
-        ulong gateTime = 0;
+        ulong gameTime = 0;
 
         ConsoleKey key;
 
         do
         {
-            Console.SetCursorPosition(x, y);
-            Console.Write(' ');
+            hero = allSpaceships[0];
 
             #region SpaceshipMove
 
@@ -58,19 +52,20 @@ internal class Program
                     switch (key)
                     {
                         case ConsoleKey.UpArrow:
-                            direction = SpaceshipMovement.Up;
+                            direction = Movements.Up;
                             break;
                         case ConsoleKey.DownArrow:
-                            direction = SpaceshipMovement.Down;
+                            direction = Movements.Down;
                             break;
                         case ConsoleKey.LeftArrow:
-                            direction = SpaceshipMovement.Left;
+                            direction = Movements.Left;
                             break;
                         case ConsoleKey.RightArrow:
-                            direction = SpaceshipMovement.Right;
+                            direction = Movements.Right;
                             break;
                         case ConsoleKey.Spacebar:
-                            gamezone = AttackBlusterUI.ShootBluster(ref gamezone, hero, ref allSpaceships, false);
+                            gamezone = AttackBlusterUI.ShootByBluster(ref gamezone, ref hero, ref allSpaceships, 
+                                                                        false, gameTime, ref score, ref isGameOver);
                             break;
                         case ConsoleKey.Escape:
                             isRunning = false;
@@ -80,56 +75,41 @@ internal class Program
                     }
                 }
     
-                if (gateTime % hero.spaceshipSpeed == 0L)
+                if (gameTime % level.heroSpeed == 0L)
                 {
                     switch (direction)
-                    {
-                        //TODO make function of direction
-        
-                        case SpaceshipMovement.Up:
-                            int[] oldPosition = BL.GetOldPosition(x, y);
-                            y--;
-                            hero.spaceshipCoodinates.y = y;
-                            gamezone = GamezoneManipulations.UpdatePositionOnGamezone(ref gamezone, hero, false, oldPosition);
+                    {       
+                        case Movements.Up:
+                            gamezone = SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref hero, ref x, ref y, direction);
                             break;
-                        case SpaceshipMovement.Down:
-                            oldPosition = BL.GetOldPosition(x, y);
-                            y++;
-                            hero.spaceshipCoodinates.y = y;
-                            gamezone = GamezoneManipulations.UpdatePositionOnGamezone(ref gamezone, hero, false, oldPosition);
+                        case Movements.Down:
+                            gamezone = SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref hero, ref x, ref y, direction);
                             break;
-                        case SpaceshipMovement.Left:
-                            oldPosition = BL.GetOldPosition(x, y);
-                            x--;
-                            hero.spaceshipCoodinates.x = x;
-                            gamezone = GamezoneManipulations.UpdatePositionOnGamezone(ref gamezone, hero, false, oldPosition);
+                        case Movements.Left:
+                            gamezone = SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref hero, ref x, ref y, direction);
                             break;
-                        case SpaceshipMovement.Right:
-                            oldPosition = BL.GetOldPosition(x, y);
-                            x++;
-                            hero.spaceshipCoodinates.x = x;
-                            gamezone = GamezoneManipulations.UpdatePositionOnGamezone(ref gamezone, hero, false, oldPosition);
+                        case Movements.Right:
+                            gamezone = SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref hero, ref x, ref y, direction);
                             break;
                         default:
                             break;
                     }
     
                 }
+
             #endregion
 
-            //Temp HP
-            Console.SetCursorPosition(gamezone.GetLength(0) - 15, gamezone.GetLength(1) - 3);
-            UI.PrintShortInfoAboutSpaceShip(hero);
+            gamezone = EnemyManipulation.GenerateAmountOfEnemiesOnStart(ref gamezone, ref allSpaceships, 
+                                                                            level.maxEnemiesOnScreen, gameTime, level);
+            
+            gamezone = EnemyManipulation.MoveAndShootEnemies(ref gamezone, ref allSpaceships, gameTime, ref score, level, ref isGameOver);
 
-            // Console.SetCursorPosition(gamezone.GetLength(0) - 15, gamezone.GetLength(1) - 2);
-            // UI.PrintShortInfoAboutSpaceShip(allSpaceships[1]);
-
-            Console.SetCursorPosition(x, y);
-            System.Console.Write(hero.symbol);
-
+            UI.PrintScreenOfGamezone(gamezone);
+            UI.PrintShortInfoAboutSpaceShip(gamezone, hero, score);
+            
             Thread.Sleep(DELAY);
 
-            gateTime++;        
+            gameTime++;;
 
         } while (isRunning);
 

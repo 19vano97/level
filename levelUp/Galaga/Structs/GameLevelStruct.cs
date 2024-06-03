@@ -1,13 +1,14 @@
 ﻿namespace Galaga;
 
-public struct GameLevel
+public struct GameLevelStructure
 {
-    public string name;
+    public LevelEnums name;
     public int heroHealthpoints;
     public int enemyHealthpoints;
     public int heroBlusterDamage;
-    public int heroBlusterSpeed;
+    public ulong heroSpeed;
     public int enemyBlusterDamage;
-    public int enemyBlusterSpeed;
+    public ulong enemySpeed;
+    public ulong enemyShotFrequensy;
     public int maxEnemiesOnScreen;
 }

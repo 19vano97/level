@@ -2,14 +2,6 @@
 
 public class BL
 {
-
-    public static int[] GetPositionOfSpaceship(int x, int y)
-    {
-        int[] position = new int[] {x, y};
-
-        return position;
-    }
-
     public static int GetRandomInt(int minValue = 0, int maxValue = int.MaxValue)
     {
         Random rnd = new Random();
@@ -19,14 +11,13 @@ public class BL
         return value;
     }
 
-
-    public static int[] GetOldPosition(int x, int y)
+    public static bool IsGameOverCheck(bool isGameOver)
     {
-        int[] position = new int[] {x, y};
+        if (isGameOver)
+        {
+            return false;
+        }
 
-        return position;
+        return true;
     }
-
-
-
 }

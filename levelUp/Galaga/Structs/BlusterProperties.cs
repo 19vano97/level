@@ -5,5 +5,5 @@ public struct BlusterProperties
     public int damage;
     public char symbolOfShot;
     public Position coordinates;
-    public int speed;
+    public ulong bluserSpeed;
 }
