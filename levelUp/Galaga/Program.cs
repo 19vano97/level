@@ -25,8 +25,7 @@ internal class Program
         int y = UI.GetDefaultPosition(gamezone).y;
 
         bool isRunning = true;
-        bool isGameOver = false;
-        
+
         // Start position
         hero.spaceshipCoodinates.x = x;
         hero.spaceshipCoodinates.y = y;
@@ -80,16 +79,20 @@ internal class Program
                     switch (direction)
                     {       
                         case Movements.Up:
-                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref hero, ref x, ref y, direction);
+                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, 
+                                                                ref hero, ref x, ref y, direction);
                             break;
                         case Movements.Down:
-                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref hero, ref x, ref y, direction);
+                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, 
+                                                                ref hero, ref x, ref y, direction);
                             break;
                         case Movements.Left:
-                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref hero, ref x, ref y, direction);
+                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, 
+                                                                ref hero, ref x, ref y, direction);
                             break;
                         case Movements.Right:
-                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref hero, ref x, ref y, direction);
+                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, 
+                                                                ref hero, ref x, ref y, direction);
                             break;
                         default:
                             break;
@@ -100,9 +103,10 @@ internal class Program
             #endregion
 
             EnemyManipulation.GenerateAmountOfEnemiesOnStart(ref gamezone, ref allSpaceships, 
-                                                                            level.maxEnemiesOnScreen, gameTime, level);
+                                                                level.maxEnemiesOnScreen, gameTime, level);
             
-            EnemyManipulation.MoveAndShootEnemies(ref gamezone, ref allSpaceships, gameTime, ref score, level, ref isRunning);
+            EnemyManipulation.MoveAndShootEnemies(ref gamezone, ref allSpaceships, gameTime, 
+                                                    ref score, level, ref isRunning);
 
             UI.PrintScreenOfGamezone(gamezone);
             UI.PrintShortInfoAboutSpaceShip(gamezone, hero, score);
