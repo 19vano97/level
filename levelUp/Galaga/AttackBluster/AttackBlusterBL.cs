@@ -32,7 +32,7 @@ public class AttackBlusterBL
                 }
                 else
                 {
-                    isGameOver = true;
+                    isGameOver = false;
                 }
 
                 allSpaceships = SpaceshipManipulation.DeleteSpaceshipFromArray(ref allSpaceships, victim);

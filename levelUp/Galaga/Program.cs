@@ -65,7 +65,7 @@ internal class Program
                             break;
                         case ConsoleKey.Spacebar:
                             gamezone = AttackBlusterUI.ShootByBluster(ref gamezone, ref hero, ref allSpaceships, 
-                                                                        false, gameTime, ref score, ref isGameOver);
+                                                                        false, gameTime, ref score, ref isRunning);
                             break;
                         case ConsoleKey.Escape:
                             isRunning = false;
@@ -102,7 +102,7 @@ internal class Program
             gamezone = EnemyManipulation.GenerateAmountOfEnemiesOnStart(ref gamezone, ref allSpaceships, 
                                                                             level.maxEnemiesOnScreen, gameTime, level);
             
-            gamezone = EnemyManipulation.MoveAndShootEnemies(ref gamezone, ref allSpaceships, gameTime, ref score, level, ref isGameOver);
+            gamezone = EnemyManipulation.MoveAndShootEnemies(ref gamezone, ref allSpaceships, gameTime, ref score, level, ref isRunning);
 
             UI.PrintScreenOfGamezone(gamezone);
             UI.PrintShortInfoAboutSpaceShip(gamezone, hero, score);

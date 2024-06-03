@@ -30,7 +30,7 @@ public class LevelDesign
                 heroBlusterDamage = 50,
                 heroSpeed = 4,
                 enemyHealthpoints = 75,
-                enemyBlusterDamage = 20,
+                enemyBlusterDamage = 25,
                 enemySpeed = 4,
                 enemyShotFrequensy = 15,
                 maxEnemiesOnScreen = 5

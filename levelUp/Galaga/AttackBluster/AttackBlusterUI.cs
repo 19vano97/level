@@ -107,7 +107,7 @@ public class AttackBlusterUI
 
     public static char GetHeroBlusterShot()
     {
-        char shot = '|';
+        char shot = '\u2225';
 
         return shot;
     }

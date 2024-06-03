@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Galaga")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+571bf6d907047d7162fdb09ad977c7ab3f044fc8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f726169ba0842cb5e0301eb11622b263b9d07a67")]
 [assembly: System.Reflection.AssemblyProductAttribute("Galaga")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Galaga")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
