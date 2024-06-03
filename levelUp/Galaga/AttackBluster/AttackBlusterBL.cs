@@ -3,7 +3,8 @@
 public class AttackBlusterBL
 {
     const int DELAY_OF_KILLED_ENEMY = 100;
-    public static char[,] DamageSpaceship(ref char[,] gamezone, ref Spaceship attacker, 
+
+    public static void DamageSpaceship(ref char[,] gamezone, ref Spaceship attacker, 
                                                 ref Spaceship victim, ref Spaceship[] allSpaceships, 
                                                 ulong gameTime, ref int score, ref bool isGameOver)
     {
@@ -16,7 +17,7 @@ public class AttackBlusterBL
 
             if (victim.healthPoint <= 0)
             {
-                gamezone = GamezoneManipulations.DeletePosition(ref gamezone, victim.spaceshipCoodinates);
+                GamezoneManipulations.DeletePosition(ref gamezone, victim.spaceshipCoodinates);
 
                 Console.SetCursorPosition(victim.spaceshipCoodinates.x, victim.spaceshipCoodinates.y);
                 Console.Write('\u2600');
@@ -42,8 +43,6 @@ public class AttackBlusterBL
                 gamezone = UI.PrintEnemy(ref gamezone, ref victim);
             }
         }
-
-        return gamezone;
     }
 
     public static bool IsTargetUnderBlustShot(Position blusterShotPosition, ref Spaceship[] allSpaceships)
@@ -92,17 +91,15 @@ public class AttackBlusterBL
         return victim;
     }
 
-    public static char[,] EnemyAutoShooting(ref char[,] gamezone, ref Spaceship[] allSpaceships, ref Spaceship enemy, 
+    public static void EnemyAutoShooting(ref char[,] gamezone, ref Spaceship[] allSpaceships, ref Spaceship enemy, 
                                                 ulong gameTime, ref int score, GameLevelStructure level, ref bool isGameOver)
     {
         if (gameTime % level.enemyShotFrequensy == 0)
         {
-            gamezone = AttackBlusterUI.ShootByBluster(ref gamezone, ref enemy, ref allSpaceships, 
+            AttackBlusterUI.ShootByBluster(ref gamezone, ref enemy, ref allSpaceships, 
                                                         true, gameTime, ref score, ref isGameOver);
 
-            return gamezone;
+            return;
         }
-
-        return gamezone;
     }
 }

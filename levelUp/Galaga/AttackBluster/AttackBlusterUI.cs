@@ -4,7 +4,7 @@ namespace Galaga;
 
 public class AttackBlusterUI
 {
-    public static char[,] MoveBlusterShot(ref char[,] gamezone, ref Spaceship attacker, bool isEnemyShot)
+    public static void MoveBlusterShot(ref char[,] gamezone, ref Spaceship attacker, bool isEnemyShot)
     {
         int x = attacker.bluster.coordinates.x;
         int y = attacker.bluster.coordinates.y;
@@ -31,18 +31,16 @@ public class AttackBlusterUI
         if (attacker.bluster.coordinates.y < 0 || attacker.bluster.coordinates.y > gamezone.GetLength(1) - 1)
         {
             attacker.bluster.coordinates.y = oldShotPosition.y;
-            return gamezone;
+            return;
         }
 
         Console.SetCursorPosition(attacker.bluster.coordinates.x, attacker.bluster.coordinates.y);
         System.Console.Write(attacker.bluster.symbolOfShot);
 
-        gamezone = GamezoneManipulations.UpdatePositionOnGamezone(ref gamezone, attacker, oldShotPosition, true);
-
-        return gamezone;
+        GamezoneManipulations.UpdatePositionOnGamezone(ref gamezone, attacker, oldShotPosition, true);
     }
 
-    public static char[,] ShootByBluster(ref char[,] gamezone, ref Spaceship attacker, 
+    public static void ShootByBluster(ref char[,] gamezone, ref Spaceship attacker, 
                                         ref Spaceship[] allSpaceships, bool isEnemyShot, ulong gameTime, ref int score, ref bool isGameOver)
     {
         if (!isEnemyShot)
@@ -52,7 +50,7 @@ public class AttackBlusterUI
                 attacker.bluster.coordinates.x = attacker.spaceshipCoodinates.x;
                 attacker.bluster.coordinates.y = i;
     
-                gamezone = MoveBlusterShot(ref gamezone, ref attacker, isEnemyShot);
+                MoveBlusterShot(ref gamezone, ref attacker, isEnemyShot);
     
                 if (AttackBlusterBL.IsTargetUnderBlustShot(attacker.bluster.coordinates, ref allSpaceships))
                 {
@@ -61,7 +59,7 @@ public class AttackBlusterUI
                     
                     
                     
-                    gamezone = AttackBlusterBL.DamageSpaceship(ref gamezone, ref attacker, 
+                    AttackBlusterBL.DamageSpaceship(ref gamezone, ref attacker, 
                                                                 ref victim, ref allSpaceships, gameTime, ref score, ref isGameOver);
                     break;
                 }
@@ -81,7 +79,7 @@ public class AttackBlusterUI
                 attacker.bluster.coordinates.x = attacker.spaceshipCoodinates.x;
                 attacker.bluster.coordinates.y = i;
     
-                gamezone = MoveBlusterShot(ref gamezone, ref attacker, isEnemyShot);
+                MoveBlusterShot(ref gamezone, ref attacker, isEnemyShot);
     
                 if (AttackBlusterBL.IsTargetUnderBlustShot(attacker.bluster.coordinates, ref allSpaceships))
                 {
@@ -89,7 +87,7 @@ public class AttackBlusterUI
                                                                             ref allSpaceships, isEnemyShot);
 
                     
-                    gamezone = AttackBlusterBL.DamageSpaceship(ref gamezone, ref attacker, 
+                    AttackBlusterBL.DamageSpaceship(ref gamezone, ref attacker, 
                                                                 ref victim, ref allSpaceships, gameTime, ref score, ref isGameOver);
                     break;
                 }
@@ -101,8 +99,6 @@ public class AttackBlusterUI
                 System.Console.Write(' ');
             }
         }
-
-        return gamezone;
     }
 
     public static char GetHeroBlusterShot()
