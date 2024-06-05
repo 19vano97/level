@@ -2,34 +2,33 @@
 
 public class EnemyManipulation
 {
-    public static void MoveAutomiticallyEnemy(ref char[,] gamezone, ref Spaceship[] allSpaceships, 
-                                                    ref Spaceship enemy, ulong gameTime, GameLevelStructure level)
+    public static void MoveAutomiticallyEnemy(ref GameProperties currentGameProperties, ref Spaceship enemy)
     {
-        Movements directionInt = GetRandomStepOfDirectionForEnemy(gamezone, enemy);
+        Movements directionInt = GetRandomStepOfDirectionForEnemy(currentGameProperties.gamezone, enemy);
 
-        if (gameTime % level.enemySpeed == 0)
+        if (currentGameProperties.gameTime % currentGameProperties.level.enemySpeed == 0)
         {
             if (directionInt == Movements.Left)
             {
-                SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref enemy, ref enemy.spaceshipCoodinates.x, 
+                SpaceshipManipulation.MoveSpaceship(ref currentGameProperties, ref enemy, ref enemy.spaceshipCoodinates.x, 
                                                                 ref enemy.spaceshipCoodinates.y, directionInt);
             }
             
             if (directionInt == Movements.Right)
             {
-                SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref enemy, ref enemy.spaceshipCoodinates.x, 
+                SpaceshipManipulation.MoveSpaceship(ref currentGameProperties, ref enemy, ref enemy.spaceshipCoodinates.x, 
                                                                 ref enemy.spaceshipCoodinates.y, directionInt);
             }
     
             if (directionInt == Movements.Up)
             {
-                SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref enemy, ref enemy.spaceshipCoodinates.x, 
+                SpaceshipManipulation.MoveSpaceship(ref currentGameProperties, ref enemy, ref enemy.spaceshipCoodinates.x, 
                                                                 ref enemy.spaceshipCoodinates.y, directionInt);
             }
     
             if (directionInt == Movements.Down)
             {
-                SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, ref enemy, ref enemy.spaceshipCoodinates.x, 
+                SpaceshipManipulation.MoveSpaceship(ref currentGameProperties, ref enemy, ref enemy.spaceshipCoodinates.x, 
                                                                 ref enemy.spaceshipCoodinates.y, directionInt);
             }
         }
@@ -71,39 +70,35 @@ public class EnemyManipulation
         return direction;
     }
 
-    public static void GenerateAmountOfEnemiesOnStart(ref char[,] gamezone, ref Spaceship[] allSpaceships, 
-                                                            int enemiesMax, ulong gameTime, GameLevelStructure level)
+    public static void GenerateAmountOfEnemiesOnStart(ref GameProperties currentGameProperties)
     {
-        if (GetAmountOfEnemies(allSpaceships) > enemiesMax || GetAmountOfEnemies(allSpaceships) > 1)
+        if (GetAmountOfEnemies(currentGameProperties.allSpaceships) > currentGameProperties.level.maxEnemiesOnScreen 
+            || GetAmountOfEnemies(currentGameProperties.allSpaceships) > 1)
         {
             return;
         }
        
-        for (int i = 0; i < enemiesMax; i++)
+        for (int i = 0; i < currentGameProperties.level.maxEnemiesOnScreen; i++)
         {
-            Spaceship enemy = SpaceshipManipulation.InitEnemy(gamezone, level); 
-            allSpaceships = SpaceshipManipulation.AddSpaceshipToArray(ref allSpaceships, ref enemy);
+            Spaceship enemy = SpaceshipManipulation.InitEnemy(currentGameProperties.gamezone, currentGameProperties.level); 
+            currentGameProperties.allSpaceships = SpaceshipManipulation.AddSpaceshipToArray(ref currentGameProperties.allSpaceships, ref enemy);
         }
     }
 
-    public static void MoveAndShootEnemies(ref char[,] gamezone, ref Spaceship[] allSpaceships, 
-                                                ulong gameTime, ref int score, GameLevelStructure level, ref bool isGameOver)
+    public static void MoveAndShootEnemies(ref GameProperties currentGameProperties)
     {
-        for (int i = 1; i < allSpaceships.Length; i++)
+        for (int i = 1; i < currentGameProperties.allSpaceships.Length; i++)
         {
-            MoveAutomiticallyEnemy(ref gamezone, ref allSpaceships, ref allSpaceships[i], gameTime, level);
-            AttackBlusterBL.EnemyAutoShooting(ref gamezone, ref allSpaceships, 
-                                                            ref allSpaceships[i], gameTime, 
-                                                            ref score, level, ref isGameOver);
+            MoveAutomiticallyEnemy(ref currentGameProperties, ref currentGameProperties.allSpaceships[i]);
+            AttackBlusterBL.EnemyAutoShooting(ref currentGameProperties, ref currentGameProperties.allSpaceships[i]);
 
-            allSpaceships = SpaceshipManipulation.UpdateSpaceshipArray(ref allSpaceships, ref allSpaceships[i]);
+            currentGameProperties.allSpaceships = SpaceshipManipulation.UpdateSpaceshipArray(ref currentGameProperties.allSpaceships, 
+                                                                                                ref currentGameProperties.allSpaceships[i]);
         }
     }
 
     public static int GetAmountOfEnemies(Spaceship[] allSpaceships)
     {
-        int value = allSpaceships.Length - 1;
-
-        return value;
+        return allSpaceships.Length - 1;
     }
 }

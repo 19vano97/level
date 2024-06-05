@@ -45,13 +45,6 @@ public class UI
         return gamezone;
     }
 
-    public static char GetDestoyEnemy()
-    {
-        char destroy = '\u2601';
-
-        return destroy;
-    }
-
     public static void PrintShortInfoAboutSpaceShip(char[,] gamezone, Spaceship spaceshipInfo, int score)
     {
         int x = gamezone.GetLength(0) - 15;
@@ -117,20 +110,20 @@ public class UI
     public static void PrintScreenOfGamezone(char[,] gamezone)
     {
         // Bottom + Top
-        for (int i = 1; i <= gamezone.GetLength(0); i++)
+        for (int i = 0; i <= gamezone.GetLength(0); i++)
         {
-            if (i == 1)
+            if (i == 0)
             {
                 Console.SetCursorPosition(i, gamezone.GetLength(1));
                 System.Console.Write('┗');
-                Console.SetCursorPosition(i, 1);
+                Console.SetCursorPosition(i, 0);
                 System.Console.Write('┏');
             }
             else if (i == gamezone.GetLength(0))
             {
                 Console.SetCursorPosition(i, gamezone.GetLength(1));
                 System.Console.Write('┛');
-                Console.SetCursorPosition(i, 1);
+                Console.SetCursorPosition(i, 0);
                 System.Console.Write('┓');
             }
             else
@@ -142,7 +135,7 @@ public class UI
 
         for (int i = 0; i < gamezone.GetLength(1); i++)
         {
-            Console.SetCursorPosition(1, i);
+            Console.SetCursorPosition(0, i);
             System.Console.Write('┃');
             Console.SetCursorPosition(gamezone.GetLength(0), i);
             System.Console.Write('┃');

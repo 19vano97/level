@@ -36,11 +36,21 @@ internal class Program
 
         ulong gameTime = 0;
 
+        GameProperties currentGameProperties = new GameProperties()
+        {
+            gamezone = gamezone,
+            allSpaceships = allSpaceships,
+            gameTime = gameTime,
+            isGameOver = isRunning,
+            level = level,
+            score = score
+        };
+
         ConsoleKey key;
 
         do
         {
-            hero = allSpaceships[0];
+            hero = currentGameProperties.allSpaceships[0];
 
             #region SpaceshipMove
 
@@ -63,11 +73,10 @@ internal class Program
                             direction = Movements.Right;
                             break;
                         case ConsoleKey.Spacebar:
-                            AttackBlusterUI.ShootByBluster(ref gamezone, ref hero, ref allSpaceships, 
-                                                                        false, gameTime, ref score, ref isRunning);
+                            AttackBlusterUI.ShootByBluster(ref currentGameProperties, ref hero, false);
                             break;
                         case ConsoleKey.Escape:
-                            isRunning = false;
+                            currentGameProperties.isGameOver = false;
                             break;
                         default:
                             break;
@@ -79,19 +88,19 @@ internal class Program
                     switch (direction)
                     {       
                         case Movements.Up:
-                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, 
+                            SpaceshipManipulation.MoveSpaceship(ref currentGameProperties, 
                                                                 ref hero, ref x, ref y, direction);
                             break;
                         case Movements.Down:
-                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, 
+                            SpaceshipManipulation.MoveSpaceship(ref currentGameProperties,
                                                                 ref hero, ref x, ref y, direction);
                             break;
                         case Movements.Left:
-                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, 
+                            SpaceshipManipulation.MoveSpaceship(ref currentGameProperties,
                                                                 ref hero, ref x, ref y, direction);
                             break;
                         case Movements.Right:
-                            SpaceshipManipulation.MoveSpaceship(ref gamezone, ref allSpaceships, 
+                            SpaceshipManipulation.MoveSpaceship(ref currentGameProperties,
                                                                 ref hero, ref x, ref y, direction);
                             break;
                         default:
@@ -102,20 +111,18 @@ internal class Program
 
             #endregion
 
-            EnemyManipulation.GenerateAmountOfEnemiesOnStart(ref gamezone, ref allSpaceships, 
-                                                                level.maxEnemiesOnScreen, gameTime, level);
+            EnemyManipulation.GenerateAmountOfEnemiesOnStart(ref currentGameProperties);
             
-            EnemyManipulation.MoveAndShootEnemies(ref gamezone, ref allSpaceships, gameTime, 
-                                                    ref score, level, ref isRunning);
+            EnemyManipulation.MoveAndShootEnemies(ref currentGameProperties);
 
-            UI.PrintScreenOfGamezone(gamezone);
-            UI.PrintShortInfoAboutSpaceShip(gamezone, hero, score);
+            UI.PrintScreenOfGamezone(currentGameProperties.gamezone);
+            UI.PrintShortInfoAboutSpaceShip(currentGameProperties.gamezone, hero, currentGameProperties.score);
             
             Thread.Sleep(DELAY);
 
-            gameTime++;;
+            currentGameProperties.gameTime +=2;
 
-        } while (isRunning);
+        } while (currentGameProperties.isGameOver);
 
         Console.CursorVisible = false;
     }

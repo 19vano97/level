@@ -10,14 +10,4 @@ public class BL
 
         return value;
     }
-
-    public static bool IsGameOverCheck(bool isGameOver)
-    {
-        if (isGameOver)
-        {
-            return false;
-        }
-
-        return true;
-    }
 }

@@ -114,7 +114,7 @@ public class SpaceshipManipulation
         return coordinates;
     }
 
-    public static void MoveSpaceship(ref char[,] gamezone, ref Spaceship[] allSpaceships, ref Spaceship spaceship, ref int x, ref int y, 
+    public static void MoveSpaceship(ref GameProperties currentGameProperties, ref Spaceship spaceship, ref int x, ref int y, 
                                             Movements direction)
     {
         Console.CursorVisible = false;
@@ -143,7 +143,7 @@ public class SpaceshipManipulation
         
         if (direction.HasFlag(Movements.Down))
         {
-            if (y + 1 > gamezone.GetLength(1))
+            if (y + 1 > currentGameProperties.gamezone.GetLength(1))
             {
                 spaceship.spaceshipCoodinates.y = y;
             }
@@ -169,7 +169,7 @@ public class SpaceshipManipulation
         
         if (direction.HasFlag(Movements.Right))
         {
-            if (x + 1 > gamezone.GetLength(0))
+            if (x + 1 > currentGameProperties.gamezone.GetLength(0))
             {
                 spaceship.spaceshipCoodinates.x = x;
             }
@@ -180,8 +180,8 @@ public class SpaceshipManipulation
             }
         }
         
-        GamezoneManipulations.UpdatePositionOnGamezone(ref gamezone, spaceship, oldPosition, false);
-        allSpaceships = UpdateSpaceshipArray(ref allSpaceships, ref spaceship);
+        GamezoneManipulations.UpdatePositionOnGamezone(ref currentGameProperties.gamezone, spaceship, oldPosition, false);
+        currentGameProperties.allSpaceships = UpdateSpaceshipArray(ref currentGameProperties.allSpaceships, ref spaceship);
 
         Console.SetCursorPosition(spaceship.spaceshipCoodinates.x, spaceship.spaceshipCoodinates.y);
         System.Console.Write(spaceship.symbol);

@@ -4,23 +4,22 @@ public class AttackBlusterBL
 {
     const int DELAY_OF_KILLED_ENEMY = 100;
 
-    public static void DamageSpaceship(ref char[,] gamezone, ref Spaceship attacker, 
-                                                ref Spaceship victim, ref Spaceship[] allSpaceships, 
-                                                ulong gameTime, ref int score, ref bool isGameOver)
+    public static void DamageSpaceship(ref GameProperties currentGameProperties, ref Spaceship attacker, 
+                                                ref Spaceship victim)
     {
         if (attacker.bluster.coordinates.x == victim.spaceshipCoodinates.x 
                 && attacker.bluster.coordinates.y == victim.spaceshipCoodinates.y)
         {
             victim.healthPoint = victim.healthPoint - attacker.bluster.damage;
 
-            allSpaceships = SpaceshipManipulation.UpdateSpaceshipArray(ref allSpaceships, ref victim);
+            currentGameProperties.allSpaceships = SpaceshipManipulation.UpdateSpaceshipArray(ref currentGameProperties.allSpaceships, ref victim);
 
             if (victim.healthPoint <= 0)
             {
-                GamezoneManipulations.DeletePosition(ref gamezone, victim.spaceshipCoodinates);
+                GamezoneManipulations.DeletePosition(ref currentGameProperties.gamezone, victim.spaceshipCoodinates);
 
                 Console.SetCursorPosition(victim.spaceshipCoodinates.x, victim.spaceshipCoodinates.y);
-                Console.Write('\u2600');
+                Console.Write(AttackBlusterUI.GetEnemyDestroyed());
 
                 Thread.Sleep(DELAY_OF_KILLED_ENEMY);
 
@@ -29,77 +28,60 @@ public class AttackBlusterBL
 
                 if (attacker.id == 0)
                 {
-                    score++;
+                    currentGameProperties.score++;
                 }
                 else
                 {
-                    isGameOver = false;
+                    currentGameProperties.isGameOver = false;
                 }
 
-                allSpaceships = SpaceshipManipulation.DeleteSpaceshipFromArray(ref allSpaceships, victim);
+                currentGameProperties.allSpaceships = SpaceshipManipulation.DeleteSpaceshipFromArray(ref currentGameProperties.allSpaceships, victim);
             }
             else
             {
-                gamezone = UI.PrintEnemy(ref gamezone, ref victim);
+                currentGameProperties.gamezone = UI.PrintEnemy(ref currentGameProperties.gamezone, ref victim);
             }
         }
     }
 
     public static bool IsTargetUnderBlustShot(Position blusterShotPosition, ref Spaceship[] allSpaceships)
     {
-        bool isTargetNearShot = false;
-
         for (int i = 0; i < allSpaceships.Length; i++)
         {
             if (allSpaceships[i].spaceshipCoodinates.x == blusterShotPosition.x 
                     && allSpaceships[i].spaceshipCoodinates.y == blusterShotPosition.y)
             {
-                isTargetNearShot = true;
-
-                return isTargetNearShot;
+                return true;
             }
         }
 
-        return isTargetNearShot;
+        return false;
     }
 
     public static Spaceship GetVictimOnShotLine(Position blusterShotPosition, 
-                                                            ref Spaceship[] allSpaceships, 
-                                                            bool enemyShot = false)
-    {
-        Spaceship victim = new Spaceship();
-        
+                                                ref Spaceship[] allSpaceships, 
+                                                bool enemyShot = false)
+    {       
         if (!enemyShot)
         {
             for (int i = 0; i < allSpaceships.Length; i++)
             {
                 if (allSpaceships[i].spaceshipCoodinates.x == blusterShotPosition.x 
-                        && allSpaceships[i].spaceshipCoodinates.y == blusterShotPosition.y)
+                    && allSpaceships[i].spaceshipCoodinates.y == blusterShotPosition.y)
                 {
-                    victim = allSpaceships[i];
-
-                    return victim;
+                    return allSpaceships[i];
                 }
             }
         }
-        else
-        {
-            victim = SpaceshipManipulation.FindHeroByCoordinates(allSpaceships);
-            return victim;
-        }
-
-        return victim;
+ 
+        return SpaceshipManipulation.FindHeroByCoordinates(allSpaceships);
     }
 
-    public static void EnemyAutoShooting(ref char[,] gamezone, ref Spaceship[] allSpaceships, ref Spaceship enemy, 
-                                                ulong gameTime, ref int score, GameLevelStructure level, ref bool isGameOver)
+    public static void EnemyAutoShooting(ref GameProperties currentGameProperties, ref Spaceship enemy)
     {
-        if (gameTime % level.enemyShotFrequensy == 0)
+        if (currentGameProperties.gameTime % currentGameProperties.level.enemyShotFrequensy == 0)
         {
-            AttackBlusterUI.ShootByBluster(ref gamezone, ref enemy, ref allSpaceships, 
-                                                        true, gameTime, ref score, ref isGameOver);
-
-            return;
+            AttackBlusterUI.ShootByBluster(ref currentGameProperties, ref enemy, true);
         }
     }
 }
