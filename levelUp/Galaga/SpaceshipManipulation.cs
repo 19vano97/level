@@ -26,6 +26,8 @@ public class SpaceshipManipulation
                                                                 ref Spaceship spaceship)
     {
         allSpaceships[spaceship.id] = spaceship;
+        Console.SetCursorPosition(12, 20);
+        System.Console.WriteLine(allSpaceships.Length);
 
         return allSpaceships;
     }
