@@ -36,7 +36,7 @@ internal class Program
 
         ulong gameTime = 0;
 
-        GameProperties currentGameProperties = new GameProperties()
+        GameProperty currentGameProperties = new GameProperty()
         {
             gamezone = gamezone,
             allSpaceships = allSpaceships,

@@ -40,7 +40,7 @@ public class AttackBlusterUI
         GamezoneManipulations.UpdatePositionOnGamezone(ref gamezone, attacker, oldShotPosition, true);
     }
 
-    public static void ShootByBluster(ref GameProperties currentGameProperties, ref Spaceship attacker, 
+    public static void ShootByBluster(ref GameProperty currentGameProperties, ref Spaceship attacker, 
                                         bool isEnemyShot)
     {
         if (!isEnemyShot)

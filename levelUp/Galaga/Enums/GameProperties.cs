@@ -1,6 +1,6 @@
 ﻿namespace Galaga;
 
-public struct GameProperties
+public struct GameProperty
 {
     public char[,] gamezone;
     public Spaceship[] allSpaceships;

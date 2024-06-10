@@ -2,7 +2,7 @@
 
 public class EnemyManipulation
 {
-    public static void MoveAutomiticallyEnemy(ref GameProperties currentGameProperties, ref Spaceship enemy)
+    public static void MoveAutomiticallyEnemy(ref GameProperty currentGameProperties, ref Spaceship enemy)
     {
         Movements directionInt = GetRandomStepOfDirectionForEnemy(currentGameProperties.gamezone, enemy);
 
@@ -70,7 +70,7 @@ public class EnemyManipulation
         return direction;
     }
 
-    public static void GenerateAmountOfEnemiesOnStart(ref GameProperties currentGameProperties)
+    public static void GenerateAmountOfEnemiesOnStart(ref GameProperty currentGameProperties)
     {
         if (GetAmountOfEnemies(currentGameProperties.allSpaceships) > currentGameProperties.level.maxEnemiesOnScreen 
             || GetAmountOfEnemies(currentGameProperties.allSpaceships) > 1)
@@ -85,7 +85,7 @@ public class EnemyManipulation
         }
     }
 
-    public static void MoveAndShootEnemies(ref GameProperties currentGameProperties)
+    public static void MoveAndShootEnemies(ref GameProperty currentGameProperties)
     {
         for (int i = 1; i < currentGameProperties.allSpaceships.Length; i++)
         {

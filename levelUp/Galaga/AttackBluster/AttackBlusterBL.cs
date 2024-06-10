@@ -4,7 +4,7 @@ public class AttackBlusterBL
 {
     const int DELAY_OF_KILLED_ENEMY = 100;
 
-    public static void DamageSpaceship(ref GameProperties currentGameProperties, ref Spaceship attacker, 
+    public static void DamageSpaceship(ref GameProperty currentGameProperties, ref Spaceship attacker, 
                                                 ref Spaceship victim)
     {
         if (attacker.bluster.coordinates.x == victim.spaceshipCoodinates.x 
@@ -77,7 +77,7 @@ public class AttackBlusterBL
         return SpaceshipManipulation.FindHeroByCoordinates(allSpaceships);
     }
 
-    public static void EnemyAutoShooting(ref GameProperties currentGameProperties, ref Spaceship enemy)
+    public static void EnemyAutoShooting(ref GameProperty currentGameProperties, ref Spaceship enemy)
     {
         if (currentGameProperties.gameTime % currentGameProperties.level.enemyShotFrequensy == 0)
         {

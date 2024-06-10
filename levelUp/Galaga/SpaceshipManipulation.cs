@@ -26,8 +26,6 @@ public class SpaceshipManipulation
                                                                 ref Spaceship spaceship)
     {
         allSpaceships[spaceship.id] = spaceship;
-        Console.SetCursorPosition(12, 20);
-        System.Console.WriteLine(allSpaceships.Length);
 
         return allSpaceships;
     }
@@ -116,7 +114,7 @@ public class SpaceshipManipulation
         return coordinates;
     }
 
-    public static void MoveSpaceship(ref GameProperties currentGameProperties, ref Spaceship spaceship, ref int x, ref int y, 
+    public static void MoveSpaceship(ref GameProperty currentGameProperties, ref Spaceship spaceship, ref int x, ref int y, 
                                             Movements direction)
     {
         Console.CursorVisible = false;
