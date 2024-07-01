@@ -73,8 +73,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20240524_Lesson21", "202405
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20240524_Dynamic", "20240524_Dynamic\20240524_Dynamic.csproj", "{D89BEB19-786E-4EB7-834B-0456E6BD14CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaga", "Galaga\Galaga.csproj", "{D782D034-F2A7-4958-BD4A-F317FA2A45D9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -221,10 +219,6 @@ Global
 		{D89BEB19-786E-4EB7-834B-0456E6BD14CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D89BEB19-786E-4EB7-834B-0456E6BD14CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D89BEB19-786E-4EB7-834B-0456E6BD14CD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D782D034-F2A7-4958-BD4A-F317FA2A45D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D782D034-F2A7-4958-BD4A-F317FA2A45D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D782D034-F2A7-4958-BD4A-F317FA2A45D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D782D034-F2A7-4958-BD4A-F317FA2A45D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
